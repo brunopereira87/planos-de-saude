@@ -123,9 +123,8 @@ export default {
             `/profissao/${state}/${city}?api-key=${process.env.VUE_APP_API1_KEY}`
           );
           
-          if(res.statusText === 'OK'){
-            this.jobs = this.getSelectJobs(res.data);
-          }
+          this.jobs = this.getSelectJobs(res.data);
+          
         }catch ( err ){
           console.log(err)
         }finally {
@@ -141,10 +140,9 @@ export default {
           const res = await api.get(
             `/entidade/${job}/${state}/${city}?api-key=${process.env.VUE_APP_API2_KEY}`
           );
-          
-          if(res.statusText === 'OK'){
-            this.entities = this.getSelectEntities(res.data)
-          }
+
+          this.entities = this.getSelectEntities(res.data)
+
         } catch( err ){
           console.log(err)
         } finally {
@@ -169,9 +167,8 @@ export default {
             body
           );
           
-          if(res.statusText === 'OK'){
-            this.$emit('load-plans', res.data.planos)
-          }
+          this.$emit('load-plans', res.data.planos);
+          
         } catch( err ){
           console.log(err)
         } finally {
