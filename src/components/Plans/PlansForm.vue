@@ -79,7 +79,7 @@
         v-if="entities"
         type="submit"
         :disabled="hasErrors"
-        name="Buscar Plano" />
+        name="Buscar Planos" />
     </FormulateForm>
   </div>
   
