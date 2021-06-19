@@ -1,7 +1,7 @@
 import axios from 'axios';
 
 const axiosInstance = axios.create({
-  baseURL:'https://lb-aws-1105894158.sa-east-1.elb.amazonaws.com'
+  baseURL:'http://lb-aws-1105894158.sa-east-1.elb.amazonaws.com'
 })
 
 export const api = {
